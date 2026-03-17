@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    background-color: #7A7F85; /* Pigeon Slate Gray */
+    color: #F5F5F5;
+    font-family: var(--font-sans);
+  }
+  
+  ::selection {
+    background-color: #6C4675; /* Iridescent Purple */
+    color: white;
+  }
+}
+
+@utility brutal-border {
+  border: 2px solid #2C2E31;
+  box-shadow: 4px 4px 0px 0px rgba(44, 46, 49, 1);
+}
+
+@utility brutal-border-neon {
+  border: 2px solid #4A6D55; /* Iridescent Green */
+  box-shadow: 4px 4px 0px 0px rgba(74, 109, 85, 1);
+}
+
+@utility brutal-btn {
+  @apply brutal-border;
+  background-color: #F5F5F5;
+  color: #2C2E31;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+  
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    background-color: #D68A8A; /* Pigeon Foot Pink */
+  }
+  
+  &:active {
+    transform: translate(4px, 4px);
+  }
+}
+
+@utility brutal-btn-neon {
+  @apply brutal-border-neon;
+  background-color: #4A6D55;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+  
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    background-color: #6C4675;
+  }
+  
+  &:active {
+    transform: translate(4px, 4px);
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 2px solid black;
+}

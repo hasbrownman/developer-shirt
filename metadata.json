@@ -1,0 +1,7 @@
+{
+  "name": "SigeontajMinorholta.com",
+  "description": "A bold, personalized AI assistant with no boundaries on creativity and identity.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
